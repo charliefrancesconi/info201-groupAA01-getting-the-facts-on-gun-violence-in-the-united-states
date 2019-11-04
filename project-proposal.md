@@ -1,5 +1,5 @@
-# Gun Violence in The United States
-## Project: A data driven insight into who uses guns and what they use them for.
+# Getting the Facts on Gun Violence in The United States
+## Project: A data driven state by state insight into who uses guns and what they use them for.
 ### Project Members: April Lee, Charlie Francesconi, Bryan Bernardi, Zhijian Zheng
 Info-201: Technical Foundations of Informatics The Information School \
 University of Washington \
