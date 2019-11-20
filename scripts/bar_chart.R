@@ -1,12 +1,16 @@
 s_df <- read.csv(file = "data/gun-violence-data_01-2013_03-2018.csv",header = TRUE, stringsAsFactors = FALSE)
 
-install.packages("plotly")
+
 library(stringr)
 library(plotly)
 library(dplyr)
 library(tidyr)
 
-  
+
+# clean dataset
+s_df <- s_df%>%
+  select(incident_id,date,state, city_or_county, address, n_killed, n_injured, longitude, latitude)
+
 # change n_killed & n_injured to numeric
 s_df$n_killed <- as.numeric(s_df$n_killed, na.exclude(s_df$n_killed))
 s_df$n_injured <- as.numeric(s_df$n_injured, na.exclude(s_df$n_injured))
@@ -80,12 +84,12 @@ state_plot <- plot_ly(
   add_annotations( # add annontations for accessibility
     xref = "x",
     yref = "y",
-    x = t_k + t_i + 5,
+    x = t_k + t_i + 300,
     y = reorder(s, t_i + t_k),
     text = paste0(t_i + t_k),
     font = list(
       family = "Arial",
-      size = 12,
+      size = 10,
       color = "rgb(244, 30, 30)",
       shadow = FALSE
     ),
