@@ -24,7 +24,7 @@ state_impacts <- s_df %>%
 
 n_killed_n_injured <- s_df%>%
   mutate(year = as.numeric(substr(s_df$date, 1, 4))) %>%
-  group_by(year_value, year)%>%
+  group_by(year)%>%
   summarize(injured_num = sum(n_injured), killed_num = sum(n_killed))
 
 tidy_num <- n_killed_n_injured%>%
