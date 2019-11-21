@@ -41,16 +41,13 @@ Autumn 2019
 - **Strengths and Weaknesses of Datasets:** One of the clear advantages of these datasets is they have a ton of information. The Kaggle dataset we downloaded has more variables than we can dream of. With specifics like the congressional district and a link to the reporting source it seemed like a perfect data set. Unfortunately although all this information is great large parts of it is missing from the sets and it took a lot of cleaning to work around the missing values.
 
 
-- **Data Wrangling:** You discuss how you organized and cleaned your data. How did you reshape your data? How are missing values handled?
-You refer to the appendix: Data Dictionary.
+- **Data Wrangling:** Data was cleaned to minimize values that did not properly compute or was incomplete while maximizing values that provided full insights into each of our data's separate observations. Most missing values either disqualified the entire observation from the set (because it did not fully highlight each aspect of a shooting) or we did not need that specific feature of the observation.
 
 ## 4.0 Information visualizations
-You describe your approach for visualizing the data sets. This section should be quite closely linked to your research questions. You describe the specific choices you’ve made for visualizing the data
+Two main components went into how the information was visualized. First, how it could be visualized best to highlight trends relating to the data by state and racial/gender groups. Second, how to work best with the type of data we had. When the visualizations were created these two elements helped decide where to change hue vs alpha value and the plot type to use.
 
 ## 5.0 Technical description of Shiny application
-The shiny application is built using
-
-You describe how your Shiny application is built. You describe its major components and how they work. Key questions to answer: (1) How did you load your data (e.g., .csv file, API, etc.)? (2) What major libraries did you use? (3) How did you organize your code (directories and code files)? (4) What questions, if any, will you be answering with statistical analysis/machine learning?
+The shiny application is built with 3 major components. First the sidebar contains the title of the project. Second the tab panels contain the Overview, visualizations, and dataset. Third main page includes all of these elements to build the application. The data is loaded with a .csv file. The major libraries are plotly and, of course, shiny.
 
 ## Acknowledgements
 Every team member put their full effort into developing this stage of the project.
@@ -61,14 +58,25 @@ https://fivethirtyeight.com/features/gun-deaths/ (_Source_: Five Thirty Eight)
 https://www.kaggle.com/jameslko/gun-violence-data (_Source_: Kaggle)
 
 ## Appendix 1: Data Dictionary
-In this appendix you should describe the variables that make up your data set, including: The name of the variable, a description of its meaning, the data type, and the measurement type. A suggestion format is a table such as this:
 
+| Variable Name |                Description                | Data Type | Measurement Type |
+|:-------------:|:-----------------------------------------:|:---------:|:----------------:|
+|      year     |          The year of the shooting         |  Integer  |    Continuous    |
+|     month     |         The month of the shooting         |  Integer  |    Continuous    |
+|     intent    |         The intent of the shooter         |   String  |    Categorical   |
+|     police    | Number of police involved in the shooting |  Integer  |    Continuous    |
+|      sex      |           Gender of the shooter           |   String  |    Categorical   |
+|      age      |             Age of the shooter            |  Integer  |    Continuous    |
+|      race     |            Race of the shooter            |   String  |    Categorical   |
+|    hispanic   |   If the shooter was ethnically hispanic  |  Integer  |    Continuous    |
+|     place     |             Place of shooting             |   String  |    Continuous    |
+|   education   |            Education of shooter           |   String  |    Categorical   |
 
 ## Appendix 2: Reflections
 
 - **April Lee:** Working on my visualization was difficult. It was not difficult because of the coding, I had that down already from A5. What was especially difficult was understanding how my visualization effects the research questions. When I started making the visualization I thought I would just be creating another way for someone to be able to see the csv in a creative way. What I quickly realized was that the visualization needed to highlight a trend or pattern easily to the viewer that could answer the question. To do this I reviewed the effective visualizations chapter in the text book and used their suggestions to build my visualizations. Although it was a challenge at first, I am glad that my visualizations have a true purpose behind them besides a prettier way to see the data outside of a csv file. Working on this part of the project definitely increased my skills as a coder but surprisingly also as a thinker.
 
-- **Charlie Francesconi:** One thing I learned from this assignment is learning how to work with my team better and how to divide up work accordingly. When I was working on the technical report I didn't realize how much I was going to need to ask my teammates about what they had done and it make a relatively simple process rather difficult. In the future I will make sure to read the whole specification and make sure I understand it before just diving in and making roles and responsibilities for my team. Even though this was difficult I think it all worked out in the end and I am very glad I learned now from it. This developed my identity as a thinker and innovator because now I know to plan as a thinker and work though my writing like an innovator.
+- **Charlie Francesconi:** One thing I learned from this assignment is learning how to work with my team better and how to divide up work accordingly. When I was working on the technical report I didn't realize how much I was going to need to ask my teammates about what they had done and it make a relatively simple process rather difficult. In the future I will make sure to read the whole specification and make sure I understand it before just diving in and making roles and responsibilities for my team. Even though this was difficult I think it all worked out in the end and I am very glad I learned now from it. This developed my identity as a thinker and innovator because now I know to plan as a thinker and work though my writing like an innovator. One more thing I need to mention is I need to get much better at using github because I keep pushing the wrong versions of files and I do not think LFS is working for me.
 
 - **Bryan Bernardi:** Creating the shiny app was most frustrating for me. Working on a brand new topic we have never worked with before in an assignment was incredibly difficult because it was a brand new topic for me as a coder. Each step presented new challenges in coding. The biggest challenge was importing all of my teammates work into the one application. This was because they needed to create their visualization or modify a data set and then push it to github for me to try and work with in the shiny app and see if I could create a slider or panel based on what they created. This was a major challenge especially when my teammates work wasn't immediately working with the app. Nevertheless I am excited to have taken on this challenge. Working with my teammates code allowed me to push myself fully into shiny development and I believe I am a much stronger coder because of it.
 
@@ -76,4 +84,4 @@ In this appendix you should describe the variables that make up your data set, i
 
 
 ## Appendix 3: Use of Envisioning Cards
-In this appendix include a brief discussion of how you used the envisioning cards.
+Envisioning Cards were used periodically through the project to allow our group to take a step back and fully comprehend our work through a moral and ethical lense.
