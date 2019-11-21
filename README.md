@@ -6,3 +6,5 @@ This is a project that examines gun violence in each state to provide the cold f
 
 ## Project Proposal:
 https://github.com/charliefrancesconi/info201-groupAA01-getting-the-facts-on-gun-violence-in-the-united-states/wiki/Project-Proposal
+
+## Link to Tech Report:
