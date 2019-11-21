@@ -1,0 +1,1 @@
+shooting_dataset <- read.csv(file = "data/s_df_no_map.csv",header = TRUE, stringsAsFactors = FALSE)

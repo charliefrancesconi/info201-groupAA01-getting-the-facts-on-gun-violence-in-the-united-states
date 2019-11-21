@@ -1,14 +1,10 @@
-s_df <- read.csv(file = "data/s_df.csv",header = TRUE, stringsAsFactors = FALSE)
+s_df <- read.csv(file = "data/s_df_no_map.csv",header = TRUE, stringsAsFactors = FALSE)
 
 library(shiny)
 library(stringr)
 library(plotly)
 library(dplyr)
 library(ggplot2)
-
-
-range_of_year <- seq(2013,2018)
-
 
 histogram <- function(s_df, size, color) {
   
