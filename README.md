@@ -9,3 +9,6 @@ https://github.com/charliefrancesconi/info201-groupAA01-getting-the-facts-on-gun
 
 ## Link to Tech Report:
 https://github.com/charliefrancesconi/info201-groupAA01-getting-the-facts-on-gun-violence-in-the-united-states/wiki/Technical-Report
+
+## Our P2 Shiny app:
+https://bryanbernardi.shinyapps.io/gun_violence_us/

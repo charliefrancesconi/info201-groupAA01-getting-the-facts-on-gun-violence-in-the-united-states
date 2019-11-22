@@ -2,6 +2,7 @@
 library("shiny")
 library("plotly")
 
+# load sources
 source("scripts/Histogram.R")
 source("scripts/table.R")
 
@@ -26,38 +27,55 @@ hist_sidebar_content <- sidebarPanel(
   )
 )
 
-# plot
+# the histogram itself
 hist_main_content <- mainPanel(
   plotlyOutput(
     outputId = "plot"
   )
 )
 
-# overview "page"
-overview_panel <- tabPanel(
-  "Project Overview",
-  h1("Project Overview"),
-  h3("Project: A data driven state by state insight
+# about "page"
+about_panel <- tabPanel(
+  "About Page",
+  titlePanel("About Page"),
+  navlistPanel(
+    "Select Page",
+    tabPanel(
+      "Overview",
+      h1("Project Overview"),
+      p("Project: A data driven state by state insight
      into who uses guns and what they use them for."),
-  h4("\tProject Members: April Lee, Charlie Francesconi, Bryan Bernardi, Zhijian Zheng")
-  )
-
-#table "page"
-table_sidebar_content <- sidebarPanel(
-  conditionalPanel(
-    'input.dataset === "shooting_dataset"',
-    checkboxGroupInput("show_vars", "Columns in dataframe to show:",
-                       names(shooting_dataset), selected = names(shooting_dataset))
+      p("Add more info here (as a md file)")
+    ),
+    tabPanel(
+      "About us",
+      h1("About us"),
+      p("Insert pic + info for each member as a md file.")
+    )
   )
 )
 
+# table sidebar content
+table_sidebar_content <- sidebarPanel(
+  conditionalPanel(
+    'input.dataset ===
+    "shooting_dataset"',
+    checkboxGroupInput("show_vars", "Columns in dataframe to show:",
+      names(shooting_dataset),
+      selected = names(shooting_dataset)
+    )
+  )
+)
+
+# the actual table
 table_main_content <- mainPanel(
   tabsetPanel(
-    id = 'dataset',
+    id = "dataset",
     tabPanel("shooting_dataset", DT::dataTableOutput("mytable1"))
   )
 )
 
+# shooting table "page"
 table_panel <- tabPanel(
   "Shootings Table",
   titlePanel("Table Filter"),
@@ -77,9 +95,19 @@ hist_panel <- tabPanel(
   )
 )
 
+# conclusion "page"
+conclusion_panel <- tabPanel(
+  "Conclusion",
+  h1("Project Conclusion"),
+  p("Our final conclusion as a md file here")
+)
+
+
+# ui navigation bar
 ui <- navbarPage(
   "Gun Violence in the US Analysis",
-  overview_panel,
+  about_panel,
   hist_panel,
-  table_panel
+  table_panel,
+  conclusion_panel
 )
