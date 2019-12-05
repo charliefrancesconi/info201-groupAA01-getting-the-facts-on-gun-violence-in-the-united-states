@@ -1,7 +1,7 @@
 # load shiny library
 library("shiny")
 
-# source the server and ui files
+# source ui and server
 source("app_ui.R")
 source("app_server.R")
 
