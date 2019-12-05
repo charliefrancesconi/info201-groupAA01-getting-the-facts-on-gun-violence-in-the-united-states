@@ -8,7 +8,6 @@ library("DT")
 
 # Compile server
 server <- function(input, output) {
-<<<<<<< HEAD
   output$bar_chart <- renderPlotly({
     bar_chart()})
   output$pie_chart <- renderPlotly({
@@ -18,18 +17,3 @@ server <- function(input, output) {
   output$used_table <- DT::renderDataTable({
     data_used_table2})
 }
-=======
-  # render histogram
-  output$plot <- renderPlotly({
-    return(histogram(
-      s_df,
-      input$hist_size,
-      input$hist_color
-    ))
-  })
-  # render table
-  output$mytable1 <- DT::renderDataTable({
-    DT::datatable(shooting_dataset[, input$show_vars, drop = FALSE])
-  })
-}
->>>>>>> f548ff4633072fc9b8b448cf0f0bfe7f319a72c7
