@@ -5,8 +5,8 @@ account: charlie-francesconi
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1561878
-bundleId: 2642361
+bundleId: 2642593
 url: https://charlie-francesconi.shinyapps.io/Getting-the-Facts-on-Gun-Violence-in-the-United-States/
-when: 1575510310.9313
+when: 1575517937.5075
 asMultiple: FALSE
 asStatic: FALSE
